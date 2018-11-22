@@ -23,12 +23,6 @@ class AlfredItems {
 
         return json_encode($items);
 	}
-
-	static function of(array $items) {
-		$object = new AlfredItems();
-		$object->addItems($items);
-		return $object;
-	}
 }
 
 // {"items": [
