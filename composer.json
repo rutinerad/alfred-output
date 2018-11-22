@@ -1,3 +1,6 @@
 {
-    "name": "rutinerad/alfred-output"
+    "name": "rutinerad/alfred-output",
+    "autoload": {
+        "psr-0": { "Rutinerad\\Alfred": "src/" }
+    }  
 }
