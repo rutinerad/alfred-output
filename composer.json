@@ -14,3 +14,4 @@
     "autoload": {
         "psr-4": { "Rutinerad\\Alfred": "src/" }
     }  
+}
