@@ -12,6 +12,6 @@
         }   
     ],
     "autoload": {
-        "psr-4": { "Rutinerad\\Alfred": "src/" }
+        "psr-4": { "Rutinerad\\Alfred\\": "src/" }
     }  
 }
