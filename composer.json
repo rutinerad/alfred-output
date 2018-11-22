@@ -1,6 +1,16 @@
 {
     "name": "rutinerad/alfred-output",
+    "type": "library",
+    "description": "PHP utility classes for Alfred output.",
+    "keywords": ["alfred"],
+    "homepage": "https://github.com/rutinerad/alfred-output",
+    "license": "MIT",
+    "authors": [
+        {   
+            "name": "Samuel Lindblom",
+            "homepage": "http://rutinerad.com"
+        }   
+    ],
     "autoload": {
-        "psr-0": { "Rutinerad\\Alfred": "src/" }
+        "psr-4": { "Rutinerad\\Alfred": "src/" }
     }  
-}
