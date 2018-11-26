@@ -6,17 +6,18 @@ namespace Rutinerad\Alfred;
  * Documented here: https://www.alfredapp.com/help/workflows/inputs/script-filter/json/
  */
 class AlfredItem {
-	public $uid;
-	public $type;
-	public $title;
-	public $subtitle;
-	public $arg;
-	public $autocomplete;
-	public $iconType;
-	public $iconPath;
-	public $valid;
-	public $variables;
-	public $mods;
+	public $uid; // string
+	public $type; // string
+	public $title; // string
+	public $subtitle; // string
+	public $arg; // string
+	public $autocomplete; // string
+	public $iconType; // string
+	public $iconPath; // string
+	public $valid; // boolean
+	public $variables; // array
+	public $mods; // array
+	public $match; // string
 
 	public function __construct($title, $arg = null, $subtitle = null) {
 		$this->mods = array();
@@ -43,6 +44,7 @@ class AlfredItem {
 		if (isset($this->autocomplete)) $array['autocomplete'] = $this->autocomplete;
 		if (isset($this->variables)) $array['variables'] = $this->variables;
 		if (isset($this->mods) && !empty($this->mods)) $array['mods'] = $this->mods;
+		if (isset($this->match) && !empty($this->match)) $array['match'] = $this->match;
 
 		if (isset($this->iconType) || isset($this->iconPath)) $array['icon'] = array();
 
@@ -64,7 +66,9 @@ class AlfredItem {
 //         "icon": {
 //             "type": "fileicon",
 //             "path": "~/Desktop"
-//         }
+//         },
+//         "mods": [],
+//         "match": "my family photos"
 //     }
 // ]}
 
